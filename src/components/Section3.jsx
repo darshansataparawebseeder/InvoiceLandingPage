@@ -60,7 +60,7 @@ const Section3 = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 max-w-6xl mx-auto">
         {features.map((feature) => (
           <div
-            key={feature.id}
+            key={feature.id}   
             className="bg-white shadow-md p-6 rounded-xl border border-gray-200 hover:shadow-lg transition flex flex-col items-center text-center"
           >
             <div className="flex items-center">
