@@ -54,8 +54,7 @@ const testimonials = [
 
 const Section4 = () => {
   return (
-    <section className="py-12 px-6 md:px-12 lg:px-20 text-center">
-      {/* Header Section */}
+    <section className="py-12 px-0 text-center">
       <div className="mb-10">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
           The Webseeder Experience
@@ -67,32 +66,33 @@ const Section4 = () => {
         </p>
       </div>
 
-      {/* Scrollable Cards Section */}
       <div
-        className="flex overflow-x-auto w-[110%] -ml-18"
+        className="flex overflow-x-auto w-full space-x-6 scrollbar-hide px-0"
         style={{ scrollbarWidth: "none" }}
       >
-        <div className="flex space-x-6">
+        <div className="flex space-x-6 w-full">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-white border border-gray-300 rounded-2xl p-8 w-[20vw] h-[60vh] flex-shrink-0 text-center shadow-sm"
+              className="bg-white border border-gray-300 rounded-2xl p-6 sm:p-4 w-[70%]  md:w-[45%] lg:w-[30%] xl:w-[20vw] h-auto flex-shrink-0 text-center shadow-sm"
             >
-              <div className=" w-full h-[60%]">
-                <p className="  text-gray-800 text-lg leading-relaxed mb-6">
+              <div className="w-full h-auto">
+                <p className="text-gray-800 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
                   {testimonial.feedback}
                 </p>
               </div>
-              <div className="flex flex-col items-center w-full h-[20%]">
+              <div className="flex flex-col items-center w-full">
                 <img
                   src={testimonial.avatar}
                   alt={testimonial.name}
-                  className="w-10 h-10 rounded-full mb-3"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full mb-3"
                 />
-                <h3 className="font-semibold text-lg text-gray-900">
+                <h3 className="font-semibold text-lg sm:text-xl text-gray-900">
                   {testimonial.name}
                 </h3>
-                <p className="text-gray-500 text-sm">{testimonial.role}</p>
+                <p className="text-gray-500 text-sm sm:text-base">
+                  {testimonial.role}
+                </p>
               </div>
             </div>
           ))}
